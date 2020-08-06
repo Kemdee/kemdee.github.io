@@ -1,6 +1,6 @@
 function load(){
     var city = document.getElementById("city").value;
-    theURL = 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric&appid=c652d4d4db2b3b0a6797fffe99b97c8a';
+    theURL = 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric&appid=c652d4d4db2b3b0a6797fffe99b97c8a';
     $.ajax({
         url: theURL,
         success: function (data) {
