@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/weather.css">
+    <script src="JS/index.js"></script>
+    <script src="JS/weather.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <title>Weather</title>
+</head>
+<body>
+    <section class="section1">
+        <div class="header" id="head">
+            <img id="log" src="IMG/logo.png" alt="logo">
+            <ul id="u">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><div class="dropdown">
+                        <a class="dropbtn" href="#" id="dt">Data</a>
+                        <div class="dropdown-content" id="dc">
+                            <a href="geo.html" class="drop" id="go">GeoJSON</a>
+                            <a href="earthquake.html" class="drop" id="dw">Earthquake</a>
+                            <a href="#" class="drop" id="dw">Weather</a>
+                            <a href="covid.html" class="drop" id="dw">Covid-19</a>
+                            <a href="pop.html" class="drop" id="d2">Population</a>
+                        </div>
+                    </div></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="main"></div>
+            <h1>Weather Forecast</h1>
+    </section>
+    <section class="section2">
+        <br><br><br>
+        <div id="ci"><input type="text" id="city" name="city" placeholder="Enter city name"></div>
+        <br>
+        <div id="sub"><input type="submit" value="Submit" id="submit"></div>
+        <br><br><br>
+        <div class="weainfo">
+            <div class="day">
+                <div id="weatherName"></div>
+                <div id="weatherCountry"></div>
+                <div id="weatherImage"></div>
+                <div id="weatherTemp"></div>
+                <div id="weatherInfo"></div>
+                <div id="weatherTime"></div>
+            </div>
+            <div class="day">
+                <div id="weatherName1"></div>
+                <div id="weatherCountry1"></div>
+                <div id="weatherImage1"></div>
+                <div id="weatherTemp1"></div>
+                <div id="weatherInfo1"></div>
+                <div id="weatherTime1"></div>
+            </div>
+            <div class="day">
+                <div id="weatherName2"></div>
+                <div id="weatherCountry2"></div>
+                <div id="weatherImage2"></div>
+                <div id="weatherTemp2"></div>
+                <div id="weatherInfo2"></div>
+                <div id="weatherTime2"></div>
+            </div>
+            <div class="day">
+                <div id="weatherName3"></div>
+                <div id="weatherCountry3"></div>
+                <div id="weatherImage3"></div>
+                <div id="weatherTemp3"></div>
+                <div id="weatherInfo3"></div>
+                <div id="weatherTime3"></div>
+            </div>
+            <div class="day">
+                <div id="weatherName4"></div>
+                <div id="weatherCountry4"></div>
+                <div id="weatherImage4"></div>
+                <div id="weatherTemp4"></div>
+                <div id="weatherInfo4"></div>
+                <div id="weatherTime4"></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="foot">
+            <div class="f-item">
+                <h1>Quick Links</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="geo.html">GeoJSON</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="f-item">
+                <h1>Data page</h1>
+                <ul>
+                    <li><a href="earthquake.html">Earthquake</a></li>
+                    <li><a>Weather</a></li>
+                    <li><a href="covid.html">Covid-19</a></li>
+                    <li><a href="pop.html">Population</a></li>
+                </ul>
+            </div>
+            <div class="f-item">
+                <h1>Contact Info</h1>
+                <ul>
+                    <li>Address: African Leadership College, Mauritius</li>
+                    <li>Phone: 230 5756 6743</li>
+                </ul>
+            </div>
+        </div>
+        <div id="line"></div>
+        <h2 id="copy">Copyright ©2020 All rights reserved | A project by Group 4</h2>
+    </footer>
+    <script>
+        document.getElementById("submit").addEventListener("click", load);
+        var input = document.getElementById("city");
+        input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("submit").click();
+            }
+        });
+    </script>
+</body>
+</html>

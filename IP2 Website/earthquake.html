@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/earthquake.css">
+    <script src="JS/index.js"></script>
+    <script src="JS/earthquake.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <title>Earthquake</title>
+</head>
+<body>
+    <section class="section1">
+        <div class="header" id="head">
+            <img id="log" src="IMG/logo.png" alt="logo">
+            <ul id="u">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><div class="dropdown">
+                        <a class="dropbtn" href="#" id="dt">Data</a>
+                        <div class="dropdown-content" id="dc">
+                            <a href="geo.html" class="drop" id="go">GeoJSON</a>
+                            <a href="#" class="drop" id="dw">Earthquake</a>
+                            <a href="weather.html" class="drop" id="dw">Weather</a>
+                            <a href="covid.html" class="drop" id="dw">Covid-19</a>
+                            <a href="pop.html" class="drop" id="d2">Population</a>
+                        </div>
+                    </div></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="main"></div>
+            <h1>Earthquake Mapping</h1>
+    </section>
+    <section class="section2">
+        <br><br>
+        <h2>Click on any of the below buttons to view real time earthquake data all over the world</h2>
+        <br>
+        <h3>Please be patient while the data loads</h3>
+        <br>
+        <div class="grid-cont">
+            <div class="grid-item">
+                <div class="dropdown1">
+                    <p class="dropbtn1">Past Hour</p>
+                    <div class="drop-cont">
+                        <button type="button" id="sigearth1">Significant Earthquakes</button>
+                        <button type="button" id="4.5earth1">M4.5+ Earthquakes</button>
+                        <button type="button" id="2.5earth1">M2.5+ Earthquakes</button>
+                        <button type="button" id="1.0earth1">M1.0+ Earthquakes</button>
+                        <button type="button" id="allearth1">All Earthquakes</button>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="dropdown1">
+                    <p class="dropbtn1">Past Day</p>
+                    <div class="drop-cont">
+                        <button type="button" id="sigearth2">Significant Earthquakes</button>
+                        <button type="button" id="4.5earth2">M4.5+ Earthquakes</button>
+                        <button type="button" id="2.5earth2">M2.5+ Earthquakes</button>
+                        <button type="button" id="1.0earth2">M1.0+ Earthquakes</button>
+                        <button type="button" id="allearth2">All Earthquakes</button>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="dropdown1">
+                    <p class="dropbtn1">Past 7 Days</p>
+                    <div class="drop-cont">
+                        <button type="button" id="sigearth3">Significant Earthquakes</button>
+                        <button type="button" id="4.5earth3">M4.5+ Earthquakes</button>
+                        <button type="button" id="2.5earth3">M2.5+ Earthquakes</button>
+                        <button type="button" id="1.0earth3">M1.0+ Earthquakes</button>
+                        <button type="button" id="allearth3">All Earthquakes</button>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="dropdown1">
+                    <p class="dropbtn1">Past 30 Days</p>
+                    <div class="drop-cont">
+                        <button type="button" id="sigearth4">Significant Earthquakes</button>
+                        <button type="button" id="4.5earth4">M4.5+ Earthquakes</button>
+                        <button type="button" id="2.5earth4">M2.5+ Earthquakes</button>
+                        <button type="button" id="1.0earth4">M1.0+ Earthquakes</button>
+                        <button type="button" id="allearth4">All Earthquakes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="info"></div>
+        <div id="map"></div>
+    </section>
+    <footer>
+        <div class="foot">
+            <div class="f-item">
+                <h1>Quick Links</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="geo.html">GeoJSON</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="f-item">
+                <h1>Data page</h1>
+                <ul>
+                    <li><a>Earthquake</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="covid.html">Covid-19</a></li>
+                    <li><a href="geo.html">Population</a></li>
+                </ul>
+            </div>
+            <div class="f-item">
+                <h1>Contact Info</h1>
+                <ul>
+                    <li>Address: African Leadership College, Mauritius</li>
+                    <li>Phone: 230 5756 6743</li>
+                </ul>
+            </div>
+        </div>
+        <div id="line"></div>
+        <h2 id="copy">Copyright ©2020 All rights reserved | A project by Group 4</h2>
+    </footer>
+    <!-- Need the following code for Google Maps. PLEASE INSERT YOUR OWN GOOGLE MAPS KEY BELOW -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvbSp5bRLGeFFWS511R87t7XtFNXghzJ0&callback=initMap">
+    </script>
+    <!-- Need the following code for clustering Google maps markers-->
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+        </script>
+    <script>
+        document.getElementById("sigearth1").addEventListener("click", load1);
+        document.getElementById("4.5earth1").addEventListener("click", load2);
+        document.getElementById("2.5earth1").addEventListener("click", load3);
+        document.getElementById("1.0earth1").addEventListener("click", load4);
+        document.getElementById("allearth1").addEventListener("click", load5);
+        document.getElementById("sigearth2").addEventListener("click", load6);
+        document.getElementById("4.5earth2").addEventListener("click", load7);
+        document.getElementById("2.5earth2").addEventListener("click", load8);
+        document.getElementById("1.0earth2").addEventListener("click", load9);
+        document.getElementById("allearth2").addEventListener("click", load10);
+        document.getElementById("sigearth3").addEventListener("click", load11);
+        document.getElementById("4.5earth3").addEventListener("click", load12);
+        document.getElementById("2.5earth3").addEventListener("click", load13);
+        document.getElementById("1.0earth3").addEventListener("click", load14);
+        document.getElementById("allearth3").addEventListener("click", load15);
+        document.getElementById("sigearth4").addEventListener("click", load16);
+        document.getElementById("4.5earth4").addEventListener("click", load17);
+        document.getElementById("2.5earth4").addEventListener("click", load18);
+        document.getElementById("1.0earth4").addEventListener("click", load19);
+        document.getElementById("allearth4").addEventListener("click", load20);
+    </script>
+</body>
+</html>
